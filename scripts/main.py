@@ -162,10 +162,10 @@ def sort_endpoints(endpoints: set[tuple[str, str]]) -> list[tuple[str, str]]:
     return sorted(endpoints, key=lambda endpoint: (ipaddress.ip_address(endpoint[0]), int(endpoint[1])))
 
 
-def country_to_flag(code: str) -> str:
-    if len(code) != 2 or code == 'XX':
-        return ''
-    return chr(ord(code[0]) - 65 + 0x1F1E6) + chr(ord(code[1]) - 65 + 0x1F1E6)
+#def country_to_flag(code: str) -> str:
+    #if len(code) != 2 or code == 'XX':
+        #return ''
+    #return chr(ord(code[0]) - 65 + 0x1F1E6) + chr(ord(code[1]) - 65 + 0x1F1E6)
 
 
 def _ensure_mmdb() -> None:
